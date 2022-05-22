@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+
+<!--Hordenamiento de los objetos (row y div)-->
+<!-- line 6 : Text center para hacer que el contenido quede de manera centrada -->
+<div class="row">
+    <div  *ngFor="let product of products"  class="card m-4 text-center" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{product.category.name}}</h6>
+          <p class="card-text"> stock: {{product.stock}}.</p>
+          <p class="card-text">sales: {{product.sales}}</p>
+          <p class="card-text">Q: {{product.price}}</p>
+          
+          <button class="btn btn-primary">Add to Shoopin card </button>
+        </div>
+      </div>
+</div>
+
+
+
